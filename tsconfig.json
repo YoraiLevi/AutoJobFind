@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "target": "es2017",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "lib": ["es2015", "es2016", "es2017", "dom"],
+        "sourceMap": true,
+        "declaration": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noFallthroughCasesInSwitch": true,
+        "pretty": true,
+        "stripInternal": true,
+        
+        "strict": false,
+        
+        "noImplicitReturns": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "baseUrl": "./src",
+        "paths": {
+            "common/*": ["common/*"],
+            "configuration/*": ["configuration/*"],
+            "helpers/*": ["helpers/*"],
+            "puppeteer-extensions/*":["puppeteer-extensions/*"]
+        },
+    }
+}

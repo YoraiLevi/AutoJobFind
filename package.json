@@ -1,0 +1,26 @@
+{
+  "name": "autofindjob",
+  "version": "1.0.0",
+  "description": "\"finds a job automatically\"",
+  "main": "app.ts",
+  "dependencies": {
+    "interruptible": "0.0.2",
+    "puppeteer": "^2.0.0",
+    "puppeteer-extra": "^3.1.9",
+    "puppeteer-extra-plugin": "^3.1.4",
+    "puppeteer-extra-plugin-adblocker": "^2.11.3",
+    "puppeteer-extra-plugin-stealth": "^2.4.8",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "tsconfig-paths": "^3.9.0"
+  },
+  "scripts": {
+    "tscheck": "tsc --pretty --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "author": "Yorai Levi",
+  "license": "ISC"
+}
