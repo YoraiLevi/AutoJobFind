@@ -73,7 +73,7 @@ async function init() {
 }
 async function teardown() {
     try {
-        //await browser.close()
+        await browser.close()
     }
     catch (err) {
         console.error('Error closing browser')

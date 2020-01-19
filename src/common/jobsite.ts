@@ -14,7 +14,7 @@ export class JobSite{
     page: Page;
     opts:JobSiteOptions;
     constructor(page: Page,options? : JobSiteOptions) {
-        this.opts = Merge(JobSite.defaultOpts,options)
+        this.opts = Merge(JobSite.defaultOpts,options) as JobSiteOptions
         this.page = page;
     }
     static url: string;
@@ -32,7 +32,7 @@ export interface SiteCache{
 export abstract class SiteDisturbance {
     Detect: (page: Page) => Promise<ElementHandle> = (page: Page) => { throw new NotImplementedError('Detect is not implemented') };
     Handle: (handle: ElementHandle) => Promise<ElementHandle> = (handle: ElementHandle) => { throw new NotImplementedError('Handle is not implemented') };
-    constructor(Detect, Handle) {
+    constructor(Detect : (page: Page) => Promise<ElementHandle>, Handle : (handle: ElementHandle) => Promise<ElementHandle>) {
         this.Detect = Detect;
         this.Handle = Handle;
     }

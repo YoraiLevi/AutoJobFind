@@ -51,7 +51,7 @@ if (!fs.existsSync(config_path)) {
 }
 writeJSON(config_path, final_config)
 export { gathered as resources }
-export { config as config }
+export { final_config as config }
 export default { final_config }
 //export {final_config as config}
 //export default final_config

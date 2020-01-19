@@ -6,7 +6,7 @@ import * as path from 'path'
  * @param [json] 
  * @param [indent] 
  */
-export async function writeJSON(fileName, json = {}, indent = '\t') {
+export async function writeJSON(fileName : string, json = {}, indent = '\t') {
     try{
         var jsonContent = JSON.stringify(json, null, indent);
         let fileDir = path.dirname(fileName)
@@ -25,7 +25,7 @@ export async function writeJSON(fileName, json = {}, indent = '\t') {
  * @param [json] 
  * @param [indent] 
  */
-export function writeJSONSync(fileName, json = {}, indent = '\t') {
+export function writeJSONSync(fileName : string, json = {}, indent = '\t') {
     var jsonContent = JSON.stringify(json, null, indent);
     try {
         let fileDir = path.dirname(fileName)
