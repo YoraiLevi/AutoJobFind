@@ -8,7 +8,7 @@ const configFileName = 'config.json'
 let config_path = path.resolve(process.cwd(), configFileName)
 console.debug(configFileName + ' path: ' + config_path)
 const base_config = {
-    'resources': './resources',
+    'resources': './src/resources',
     'pappeteer': {
         'plugins': {
             'puppeteer-extra-plugin-stealth': null,
@@ -17,7 +17,7 @@ const base_config = {
         'browser_options': {
             'headless': false,
             'timeout': 30 * 1000,
-            'userDataDir': 'resources\\profile'
+            'userDataDir': '\\data\\chromium\\profile'
         }
     }
 }
