@@ -17,5 +17,8 @@
     "puppeteer-extra": "^3.1.9",
     "puppeteer-extra-plugin-adblocker": "^2.11.3",
     "puppeteer-extra-plugin-stealth": "^2.4.9"
+  },
+  "scripts": {
+    "dev-run": "ts-node -r tsconfig-paths/register app.ts"
   }
 }

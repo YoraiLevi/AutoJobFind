@@ -1,5 +1,5 @@
 import { Browser } from "puppeteer";
-import { TimeoutPromise, JobQuery, JobSite, JobSiteOptions, Merge, writeJSON } from "common";
+import { TimeoutPromise, JobQuery, JobSite, JobSiteOptions, Merge, writeJSON,loadJSONSync } from "common";
 import path from 'path'
 //import './config';
 const config = require('configuration').config;
@@ -7,6 +7,8 @@ const resources = require('configuration').resources;
 const puppeteer = require('puppeteer-extra')
 
 async function work() {
+    let cache_path = path.resolve(config.resources,'cache.json')
+    //let caches = loadJSONSync(cache_path)
     let promises = []
     try {
         let siteKeys: Array<string> = Object.keys(resources.sites)
@@ -25,7 +27,7 @@ async function work() {
             }
             catch (err) { console.warn(err) }
         }
-        await Promise.all(promises).then((results:Array<object>)=>{writeJSON(path.resolve(config.resources,'cache.json'),results)}).catch()
+        await Promise.all(promises).then((results:Array<object>)=>{writeJSON(cache_path,results)}).catch()
         console.info("Work done!")
     }
     catch (err) {

@@ -1,5 +1,5 @@
 export interface JobQuery {
-    query: string;
+    query: string | string[];
     filterKeywords: Array<string>;
     options?: {[id:string] : JobQueryOptions}
 }
