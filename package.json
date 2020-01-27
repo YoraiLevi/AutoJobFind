@@ -1,5 +1,5 @@
 {
-  "name": "AutoJobFind",
+  "name": "autofindjob",
   "version": "0.0.1",
   "description": "browser automation tool for submitting resumes",
   "main": "app.ts",
@@ -10,13 +10,16 @@
   "devDependencies": {
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.7.4"
+    "tslint": "^5.20.1",
+    "tslint-consistent-codestyle": "^1.16.0",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "puppeteer": "^2.0.0",
     "puppeteer-extra": "^3.1.9",
     "puppeteer-extra-plugin-adblocker": "^2.11.3",
-    "puppeteer-extra-plugin-stealth": "^2.4.9"
+    "puppeteer-extra-plugin-stealth": "^2.4.9",
+    "winston": "^3.2.1"
   },
   "scripts": {
     "dev-run": "ts-node -r tsconfig-paths/register app.ts"

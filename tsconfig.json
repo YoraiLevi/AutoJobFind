@@ -66,10 +66,7 @@
     /* Path Options */
     "baseUrl": "./src",
     "paths": {
-      "common/*": ["common/*"],
-      "configuration/*": ["configuration/*"],
-      "helpers/*": ["helpers/*"],
-      "puppeteer-extensions/*":["puppeteer-extensions/*"]
+      "@common/*": ["common/*"],
     }
   }
 }
